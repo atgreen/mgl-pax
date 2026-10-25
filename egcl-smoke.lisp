@@ -1,0 +1,7 @@
+(require :asdf)
+(asdf:load-system :mgl-pax)
+(assert (member :egcl *features*))
+(mgl-pax:defsection @egcl-smoke (:title "EGCL smoke") "A portable section.")
+(assert (typep @egcl-smoke 'mgl-pax:section))
+(assert (string= (mgl-pax:section-title @egcl-smoke) "EGCL smoke"))
+(format t "MGL-PAX EGCL smoke passed.~%")
